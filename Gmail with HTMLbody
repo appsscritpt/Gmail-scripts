@@ -1,0 +1,13 @@
+function htmlBodyEmail(reciepant,subject) {
+
+  var templ = HtmlService.createTemplateFromFile('HTML_File_Name').evaluate;
+  var message = templ.evaluate().getContent();
+  MailApp.sendEmail({
+    to: reciepant,
+    subject: subject,
+    htmlBody: message
+  });
+  
+ 
+  
+}
